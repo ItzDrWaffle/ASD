@@ -1,0 +1,18 @@
+local SynapseLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ItsRainbow/SynapseLib/main/source.lua'))()
+local UI = SynapseLib:CreateUI('Arsenal')
+
+local Tab1 = UI:AddTab("Tab 1")
+
+Tab1:AddLabel('Issues? Join us at bloxhub.xyz!')
+Tab1:AddSlider('Jump Power', 0, 300, function(value)
+     game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (value)
+end)
+Tab1:AddButton('Bigger Hitboxes', function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/Z61n1e3L'))()
+end)
+Tab1:AddSlider('Field Of View', 0, 120, function(value)
+    game.Workspace.Camera.FieldOfView = (value)
+end)
+
+
+

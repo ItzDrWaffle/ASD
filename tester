@@ -1,0 +1,15 @@
+local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ItsRainbow/SparkleLib/main/source.lua'))()
+local ui = lib:CreateUI('Arsenal')
+ui:CreateButton('Bigger Hitboxes', function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ItzDrWaffle/ASD/main/bigBOX'))()
+end)
+
+
+
+
+ui:CreateLabel('Issues? Contact me ItzDrWaffle.xyz')
+
+ui:CreateSlider('field of view', 0, 300, function(value)
+game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    setpropvalue(game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"), "WalkSpeed", value)
+end)
